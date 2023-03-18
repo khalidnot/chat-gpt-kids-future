@@ -1,35 +1,135 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{{asset('node_modules/mdb-ui-kit/css/mdb.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('node_modules/mdb-ui-kit/css/custom.css')}}" />
+</head>
+<body>
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body class="antialiased">
-        <div class="h1">Hello world</div>
-        <form method="post" action="{{ route('users.genderstore') }}">
-            @csrf
-            <div class="shadow overflow-hidden sm:rounded-md">
-                <div class="px-4 py-5 bg-white sm:p-6">
-                    <label for="name" class="block font-medium text-sm text-gray-700">gender</label>
-                    <input type="text" name="gender" id="gender" class="form-input rounded-md shadow-sm mt-1 block w-full"
-                           value="{{ old('gender', '') }}" />
-                    @error('gender')
-                        <p class="text-sm text-red-600">{{ $message }}</p>
-                    @enderror
-                </div>
-                <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                    <button class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
-                        Create
-                    </button>
-                </div>
+<!-- --------------------------------------- -->
+<!-- Start project here-->
+<nav class="navbar navbar-light bg-white shadow-none">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+            <!-- back btn -->
+            <div class="container mt-3">
+                <button type="button" class="btn btn-primary-outline rounded-circle px-3 shadow-none"><i class="fas fa-redo fa-2x"></i></button>
             </div>
+            <!-- back btn -->
+        </a>
+        <form class="d-flex input-group w-auto" >
+            <img
+                src="{{asset('node_modules/mdb-ui-kit/img/Group 24.png')}}"
+                height="40"
+                alt="MDB Logo"
+                loading="lazy"
+            />
         </form>
-    </body>
+    </div>
+</nav>
+
+
+<div class="container main-page d-flex justify-content-center flex-wrap p-3 text-center">
+
+    <!-- svg container-->
+
+    <!-- svg container-->
+
+    <!-- content -->
+    <div class="container d-flex justify-content-center content mb-5 mt-3 text-center">
+        <form method="post" action="{{ route('users.genderstore') }}" class="align-content-center">
+            @csrf
+            <div class="container mb-5">
+                <label class="form-label mt-5 " for="typeText"><span class="main-color fa-2x">بنت <span class="second-color">ولا</span> ولد؟</span></label>
+            </div>
+
+            <div class="container d-flex justify-content-center flex-wrap">
+
+
+                <div class="gender bg-five-color mb-4 me-2 rounded-5">
+                    <img
+                        src="{{asset('node_modules/mdb-ui-kit/img/boy.png')}}"
+                        height="80"
+                        alt="MDB Logo"
+                        loading="lazy"
+                        class=" top-40"
+                    />
+                    <input type="radio" id="age" name="gender" value="boy" />
+                    <label class="btn btn-default third-color" for="a25"></label>
+                </div>
+
+
+                <div class="gender bg-forth-color mb-4 ms-2 rounded-5">
+                    <img
+                        src="{{asset('node_modules/mdb-ui-kit/img/girl.png')}}"
+                        height="80"
+                        alt="MDB Logo"
+                        loading="lazy"
+                        class=" top-40"
+                    />
+                    <input type="radio" id="age" name="gender" value="girl" />
+                    <label class="btn btn-default third-color" for="a25"></label>
+                </div>
+
+
+            </div>
+            <div class="container mt-5">
+                <button type="submit" class="btn btn-primary btn-rounded pt-2 pb-2 btn-block bg-main-color"><span class="fa-2x">يلا نكمل</span></button>
+            </div>
+
+
+        </form>
+    </div>
+    <!-- content -->
+
+</div>
+<!-- End your project here-->
+
+
+<!-- MDB -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript"></script>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
